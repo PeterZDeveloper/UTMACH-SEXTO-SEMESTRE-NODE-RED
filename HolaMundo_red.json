@@ -1,0 +1,258 @@
+[
+    {
+        "id": "a741832e603ab100",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fe0dadfd07a0fe97",
+        "type": "inject",
+        "z": "a741832e603ab100",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola Mundo",
+        "payloadType": "str",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "6682046d034533c5"
+            ]
+        ]
+    },
+    {
+        "id": "6682046d034533c5",
+        "type": "debug",
+        "z": "a741832e603ab100",
+        "name": "Saludo",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8dd66cbf3790295e",
+        "type": "inject",
+        "z": "a741832e603ab100",
+        "name": "Sensores",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "Sensores",
+        "payload": "{\"temperatura\":30,\"humedad\":15,\"ubicacion\":\"UTMACH\"}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "6682046d034533c5"
+            ]
+        ]
+    },
+    {
+        "id": "8c3aacc5ec84ad2a",
+        "type": "switch",
+        "z": "a741832e603ab100",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "43",
+                "vt": "num"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "aabd783310cdcc8f"
+            ],
+            [
+                "fae4fc2afd1a06b8"
+            ],
+            [
+                "af59839b7cf4958b"
+            ]
+        ]
+    },
+    {
+        "id": "d13b118c04aa48c0",
+        "type": "inject",
+        "z": "a741832e603ab100",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Linea 1",
+        "payload": "43",
+        "payloadType": "num",
+        "x": 100,
+        "y": 260,
+        "wires": [
+            [
+                "8c3aacc5ec84ad2a"
+            ]
+        ]
+    },
+    {
+        "id": "1d60743a6adbecc8",
+        "type": "inject",
+        "z": "a741832e603ab100",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Linea 2",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "8c3aacc5ec84ad2a"
+            ]
+        ]
+    },
+    {
+        "id": "6bae941fefdbf1f9",
+        "type": "inject",
+        "z": "a741832e603ab100",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Linea 3",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 100,
+        "y": 380,
+        "wires": [
+            [
+                "8c3aacc5ec84ad2a"
+            ]
+        ]
+    },
+    {
+        "id": "aabd783310cdcc8f",
+        "type": "debug",
+        "z": "a741832e603ab100",
+        "name": "¿Es mayor a 10?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fae4fc2afd1a06b8",
+        "type": "debug",
+        "z": "a741832e603ab100",
+        "name": "¿Es 43 el numero?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "af59839b7cf4958b",
+        "type": "debug",
+        "z": "a741832e603ab100",
+        "name": "¿Es verdadero?",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 400,
+        "wires": []
+    }
+]
