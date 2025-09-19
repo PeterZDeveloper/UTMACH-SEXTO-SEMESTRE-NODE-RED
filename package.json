@@ -1,0 +1,12 @@
+{
+    "name": "IoTSemana4InicioGit",
+    "description": "Aprendimos a usar Git",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "Main_Semana4.json",
+            "credentialsFile": "Main_Semana4_cred.json"
+        }
+    }
+}
