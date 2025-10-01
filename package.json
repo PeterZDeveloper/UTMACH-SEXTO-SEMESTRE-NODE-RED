@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "Shudian_MainTests",
-    "description": "A Node-RED Project",
-=======
-    "name": "IoTSemana4InicioGit",
-    "description": "Aprendimos a usar Git",
->>>>>>> da60264749d71ac7f6e140626c09021d0a8db7aa
-    "version": "0.0.1",
-    "dependencies": {},
     "node-red": {
         "settings": {
             "flowFile": "ShudianFlows.json",
