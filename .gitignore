@@ -1,1 +1,24 @@
+# Dependencias de Node.js
+node_modules/
+
+# Archivos temporales y backups del editor Node-RED
 *.backup
+.config.*.json
+
+# Archivo de credenciales cifradas (no subir)
+flow_cred.json
+
+# Archivos de entorno o variables
+.env
+
+# Logs y archivos temporales
+*.log
+*.tmp
+
+# Configuración local del entorno
+.settings.js
+
+# Otros archivos que podrían ser generados por herramientas o editores
+.vscode/
+.idea/
+.DS_Store
