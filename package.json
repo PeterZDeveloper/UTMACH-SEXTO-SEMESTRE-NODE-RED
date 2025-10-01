@@ -1,0 +1,12 @@
+{
+    "name": "Shudian_MainTests",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "ShudianFlows.json",
+            "credentialsFile": "ShudianFlows_cred.json"
+        }
+    }
+}
