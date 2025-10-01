@@ -7,7 +7,7 @@ node_modules/
 
 # Archivo de credenciales cifradas (no subir)
 flow_cred.json
-
+package.json
 # Archivos de entorno o variables
 .env
 
