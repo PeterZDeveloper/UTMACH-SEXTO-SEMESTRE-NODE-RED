@@ -8,6 +8,95 @@
         "env": []
     },
     {
+        "id": "05200af357e5e09d",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "db39997cfea5b237",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "105aab1ee8cd7159",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "05200af357e5e09d",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "db39997cfea5b237",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "cbc2e713f2c80923",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "105aab1ee8cd7159",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": false,
+        "groupType": "default"
+    },
+    {
         "id": "ec9eb4894b171bee",
         "type": "inject",
         "z": "823270fd53905198",
@@ -88,5 +177,147 @@
         "x": 450,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "81d75cf3218fcef0",
+        "type": "ui-gauge",
+        "z": "823270fd53905198",
+        "name": "",
+        "group": "cbc2e713f2c80923",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "color": "#5CD65C",
+                "from": 0
+            },
+            {
+                "color": "#FFC800",
+                "from": 4
+            },
+            {
+                "color": "#EA5353",
+                "from": 7
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 510,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6bed8dc8c2cdbbf",
+        "type": "ui-gauge",
+        "z": "823270fd53905198",
+        "name": "",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "color": "#5CD65C",
+                "from": 0
+            },
+            {
+                "color": "#FFC800",
+                "from": 4
+            },
+            {
+                "color": "#EA5353",
+                "from": 7
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 530,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "745e92f71aefbf7f",
+        "type": "ui-gauge",
+        "z": "823270fd53905198",
+        "name": "",
+        "order": 0,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "color": "#5CD65C",
+                "from": 0
+            },
+            {
+                "color": "#FFC800",
+                "from": 4
+            },
+            {
+                "color": "#EA5353",
+                "from": 7
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 550,
+        "y": 560,
+        "wires": [
+            []
+        ]
     }
 ]
